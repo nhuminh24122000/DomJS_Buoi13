@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTapJS_B13</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <section class="container py-4">
+        <h1>Bài tập DOM JS</h1>
+        <div class="row">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-bt1-tab" data-toggle="pill" data-target="#v-pills-bt1"
+                        type="button" role="tab" aria-controls="v-pills-bt1" aria-selected="true">Bài tập 1</button>
+                    <button class="nav-link" id="v-pills-bt2-tab" data-toggle="pill" data-target="#v-pills-bt2"
+                        type="button" role="tab" aria-controls="v-pills-bt2" aria-selected="false">Bài tập 2</button>
+                    <button class="nav-link" id="v-pills-bt3-tab" data-toggle="pill" data-target="#v-pills-bt3"
+                        type="button" role="tab" aria-controls="v-pills-bt3" aria-selected="false">Bài tập 3</button>
+                    <button class="nav-link" id="v-pills-bt4-tab" data-toggle="pill" data-target="#v-pills-bt4"
+                        type="button" role="tab" aria-controls="v-pills-bt4" aria-selected="false">Bài tập 4</button>
+                    <button class="nav-link" id="v-pills-bt5-tab" data-toggle="pill" data-target="#v-pills-bt5"
+                        type="button" role="tab" aria-controls="v-pills-bt5" aria-selected="false">Bài tập 5</button>
+                </div>
+            </div>
+
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-bt1" role="tabpanel"
+                        aria-labelledby="v-pills-bt1-tab">
+                        <h2>Bài tập 1: Tính tiền lương nhân viên</h2>
+                        <div class="diagram">
+                            <h4>Sơ đồ 3 khối</h4>
+                            <ul>
+                                <li>
+                                    <h6>Khối 1: Input</h6>
+                                    sal (lương 1 ngày), numDay (số ngày làm)
+                                </li>
+                                <li>
+                                    <h6>Khối 2: Các bước xử lý</h6>
+                                    <ul>
+                                        <li>Tạo hàm, gắn sự kiện click 
+                                            <i class="fa-solid fa-arrow-right"></i> Lấy giá trị từ form</li>
+                                        <li>
+                                            Kiểm tra điều kiện và lập công thức tính lương nhân viên<br>
+                                            <i class="fa-solid fa-pen"></i> Kiểm tra điều kiện<br>
+                                                Nếu sal <= 0 hoặc numDay < 0 
+                                                <i class="fa-solid fa-arrow-right"></i> Thông báo nhập lại<br>
+                                            <i class="fa-solid fa-pen"></i> Lập công thức<br>
+                                                totalSalary = sal * numDay
+                                        </li>
+                                        <li>Hiển thị kết quả</li>
+                                    </ul>
+                                <li>
+                                    <h6>Khối 3: Output</h6>
+                                    totalSalary
+                                </li>
+                            </ul>
+                        </div>
+                        <form class="mt-4">
+                            <div class="form-group">
+                                <label for="salary">Nhập lương một ngày</label>
+                                <input type="number" class="form-control" id="salary" value="100000">
+                            </div>
+                            <div class="form-group">
+                                <label for="day">Nhập số ngày làm</label>
+                                <input type="number" class="form-control" id="day">
+                            </div>
+                            <button id="btnCalcSalary" type="button" class="btn btn-primary mb-3">Tính
+                                lương</button>
+                            <p id="txtSalary" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt2" role="tabpanel" aria-labelledby="v-pills-bt2-tab">
+                        <h2>Bài tập 2: Tính giá trị trung bình</h2>
+                        <div class="diagram">
+                            <h4>Sơ đồ 3 khối</h4>
+                            <ul>
+                                <li>
+                                    <h6>Khối 1: Input</h6>
+                                    num1, num2, num3, num4, num5
+                                </li>
+                                <li>
+                                    <h6>Khối 2: Các bước xử lý</h6>
+                                    <ul>
+                                        <li>Tạo hàm, gắn sự kiện click 
+                                            <i class="fa-solid fa-arrow-right"></i> Lấy giá trị từ form</li>
+                                        <li>
+                                            Lập công thức tính giá trị trung bình<br>
+                                            totalAverage = (num1 + num2 + num3 + num4 + num5) / 5
+                                        </li>
+                                        <li>Hiển thị kết quả</li>
+                                    </ul>
+                                <li>
+                                    <h6>Khối 3: Output</h6>
+                                    totalAverage
+                                </li>
+                            </ul>
+                        </div>
+                        <form class="mt-4">
+                            <div class="form-row">
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="number1" placeholder="Nhập số thứ 1">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="number2" placeholder="Nhập số thứ 2">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="number3" placeholder="Nhập số thứ 3">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="number4" placeholder="Nhập số thứ 4">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="number5" placeholder="Nhập số thứ 5">
+                                </div>
+                            </div>
+                            <button id="btnCalcAverage" type="button" class="btn btn-primary mb-3">Tính trung
+                                bình</button>
+                            <p id="txtAverage" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt3" role="tabpanel" aria-labelledby="v-pills-bt3-tab">
+                        <h2>Bài tập 3: Quy đổi tiền</h2>
+                        <div class="diagram">
+                            <h4>Sơ đồ 3 khối</h4>
+                            <ul>
+                                <li>
+                                    <h6>Khối 1: Input</h6>
+                                    curr (số tiền USD)
+                                </li>
+                                <li>
+                                    <h6>Khối 2: Các bước xử lý</h6>
+                                    <ul>
+                                        <li>Tạo hàm, gắn sự kiện click 
+                                            <i class="fa-solid fa-arrow-right"></i> Lấy giá trị từ form</li>
+                                        <li>
+                                            Kiểm tra điều kiện và lập công thức quy đổi tiền<br>
+                                            <i class="fa-solid fa-pen"></i> Kiểm tra điều kiện<br>
+                                                nếu curr <= 0 
+                                                <i class="fa-solid fa-arrow-right"></i> Thông báo nhập lại <br>
+                                            <i class="fa-solid fa-pen"></i> Lập công thức<br>
+                                                converterCurr = curr * 23500
+                                        </li>
+                                        <li>Hiển thị kết quả</li>
+                                    </ul>
+                                <li>
+                                    <h6>Khối 3: Output</h6>
+                                    converterCurr
+                                </li>
+                            </ul>
+                        </div>
+                        <form class="mt-4">
+                            <input class="form-control" type="number" id="currency" placeholder="Nhập số tiền USD">
+                            <button id="btnConverter" type="button" class="btn btn-primary my-3">Quy đổi tiền</button>
+                            <p id="txtConverter" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt4" role="tabpanel" aria-labelledby="v-pills-bt4-tab">
+                        <h2>Bài tập 4: Tính diện tích, chu vi hình chữ nhật</h2>
+                        <div class="diagram">
+                            <h4>Sơ đồ 3 khối</h4>
+                            <ul>
+                                <li>
+                                    <h6>Khối 1: Input</h6>
+                                    lengthRec (chiều dài hcn), breadthRec (chiều rộng hcn)
+                                </li>
+                                <li>
+                                    <h6>Khối 2: Các bước xử lý</h6>
+                                    <ul>
+                                        <li>Tạo hàm, gắn sự kiện click 
+                                            <i class="fa-solid fa-arrow-right"></i> Lấy giá trị từ form</li>
+                                        <li>
+                                            Kiểm tra điều kiện và lập công thức tính diện tích, chu vi hình chữ nhật<br>
+                                            <i class="fa-solid fa-pen"></i> Kiểm tra điều kiện<br>
+                                                Nếu lengthRec <= 0 hoặc breadthRec <= 0 
+                                                <i class="fa-solid fa-arrow-right"></i> Thông báo nhập lại<br>
+                                            <i class="fa-solid fa-pen"></i> Lập công thức<br>
+                                                Diện tích: area = lengthRec * breadthRec<br>
+                                                Chu vi: perimeter = (lengthRec + breadthRec) * 2
+                                        </li>
+                                        <li>Hiển thị kết quả</li>
+                                    </ul>
+                                <li>
+                                    <h6>Khối 3: Output</h6>
+                                    area, perimeter
+                                </li>
+                            </ul>
+                        </div>
+                        <form class="mt-4">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="length" placeholder="Nhập chiều dài">
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" id="breadth"
+                                        placeholder="Nhập chiều rộng">
+                                </div>
+                            </div>
+                            <button id="btnCalcRectangle" type="button" class="btn btn-primary my-3">Tính</button>
+                            <p id="txtCalcRectangle" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt5" role="tabpanel" aria-labelledby="v-pills-bt5-tab">
+                        <h2>Bài tập 5: Tính tổng 2 ký số</h2>
+                        <div class="diagram">
+                            <h4>Sơ đồ 3 khối</h4>
+                            <ul>
+                                <li>
+                                    <h6>Khối 1: Input</h6>
+                                    num (số nguyên dương có 2 chữ số)
+                                </li>
+                                <li>
+                                    <h6>Khối 2: Các bước xử lý</h6>
+                                    <ul>
+                                        <li>Tạo hàm, gắn sự kiện click 
+                                            <i class="fa-solid fa-arrow-right"></i> Lấy giá trị từ form</li>
+                                        <li>
+                                            Kiểm tra điều kiện và lập công thức tính tổng 2 ký số<br>
+                                            <i class="fa-solid fa-pen"></i> Kiểm tra điều kiện<br>
+                                                Nếu num >= 100 hoặc num < 10 hoặc Number.isInteger(num) == false<br>
+                                                <i class="fa-solid fa-arrow-right"></i> Thông báo nhập lại<br>
+                                            <i class="fa-solid fa-pen"></i> Lập công thức<br>
+                                                totalDigits = Math.floor(num / 10) + (num % 10)
+                                        </li>
+                                        <li>Hiển thị kết quả</li>
+                                    </ul>
+                                <li>
+                                    <h6>Khối 3: Output</h6>
+                                    totalDigits
+                                </li>
+                            </ul>
+                        </div>
+                        <form class="mt-4">
+                            <input class="form-control" type="number" id="number" placeholder="Nhập số có 2 chữ số">
+                            <button id="btnCalcDigits" type="button" class="btn btn-primary my-3">Tính tổng</button>
+                            <p id="txtCalcDigits" class="alert alert-success"></p>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
